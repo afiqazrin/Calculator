@@ -7,60 +7,67 @@
 
 body {
     background-color: black;
+    color: white;
+    font-family: Helvetica;
 }
 
-button {
-    color: white;
-    background-color: black;
-}
 .main-container {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    padding-top: 150px;
-}
-.display-container {
-    height: 200px;
-    width: 400px;
-    display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    margin-top: 100px;
+}
+.display-container {
+    width: 400px;
+    height: 200px;
 }
 
-.digit-container {
+.previous {
+    height: 75px;
+    font-size: 60px;
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 500px;
-    width: 400px
+    align-items: flex-end;
+    justify-content: flex-end;
 }
-
-.layer,
-.delete-layer {
+.current {
+    height: 125px;
+    font-size: 80px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+.layer {
     display: flex;
 }
 
-.layer button,
-.operator-container button {
+button {
     width: 100px;
     height: 100px;
+    border-radius: 50px;
+    border: 0;
+    margin: 5px;
+    font-size: 50px;
 }
 
-.delete-layer button {
+button:hover {
+    filter: brightness(125%);
+  }
+button[data-number="0"] {
+    text-indent: -100px;
     width: 200px;
-    height: 100px;
-    background-color: orangered;
 }
 
-.operator-container {
-    display: flex;
-    flex-direction: column;
+.number, .decimal {
+    background-color: #505050;
+    color: white;
 }
 
-.result {
-    background-color: grey;
-    padding: 5px;
-    height: 175px;
-    width: 375px;
+.operator, .equals {
+    background-color: #FF9500;
+    color: white;
+}
+
+.function {
+    background-color: #D4D4D2;
 }
